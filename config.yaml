@@ -70,3 +70,13 @@ disambiguate:
 sambamba_sort:
   extra: ''
   threads: 5
+
+recalibrate_bases:
+    jar: '/path/to/GenomeAnalysisTK.jar'
+    reference: '/path/to/reference.fa'
+    java_params: '-Xmx6g'
+    threads: 6
+    create_extra: >-
+       -knownSites /DATA/users/l.fanchi/resources/dbsnp_grch38/All_20161122.vcf.gz
+    print_extra: >-
+       --read_filter MappingQualityZero
